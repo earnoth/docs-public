@@ -1,0 +1,59 @@
+.scs-pagination > .scs-disabled {
+display:none!important;
+}
+
+.f15v2 .cw36w1, .f15w3 .cw36w1 {
+width : 100%;
+}
+.f15v2 .cw36v7 .cw36w1, .f15w3 .cw36w1 {
+    margin: 0 0 50px 4.5%;
+    float: left;
+}
+
+
+.cw36bar {
+    display: block;
+}
+
+.cw36 .cw36-toggle {
+    float: right;
+    margin-right: 100px;
+}
+
+.scs-container-styles > .scs-component-content > .sl-horizontal-row > .sl-horizontal-item {
+
+   width: 31.9% !important;
+
+}	
+
+.scs-contentlist ol.scs-pagination, .scs-recommendation ol.scs-pagination
+{
+margin-bottom: 10px;
+}
+
+.loadMore{
+    clear: both !important; 
+    margin: 20px 1.5% 30px !important;
+    text-align: center !important;
+}
+
+.loadMore a {
+   
+    display: inline-block !important;
+    color: #fff !important;
+    background: #6b8f63 !important;
+    cursor: pointer !important;
+    border: 1px solid #6b8f63 !important;
+    font-weight: 700 !important;
+    font-size: 1.6rem !important;
+    text-align: center !important;
+    padding: 0.3em 19em !important;
+    transition: all 0.2s linear !important;
+}
+
+.loadMore a:hover {
+    text-decoration: none !important;
+    background: #fff !important;
+    color: #6b8f63 !important;
+    border: 1px solid #6b8f63 !important;
+}

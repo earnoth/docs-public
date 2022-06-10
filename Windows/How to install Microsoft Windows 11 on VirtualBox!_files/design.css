@@ -1,0 +1,21 @@
+.sample-component-bold-style {
+	font-weight: bold;
+}
+
+.sample-component-italic-style {
+	font-style: italic;
+}
+.rc83 .rc83pagenav .rc83nav-rt .rc83sub{
+	display: block;
+	float: right;
+}
+.rc83 .rc83pagenav .rc83nav-rt h4 {
+    direction: unset;
+    text-align: right;
+}
+
+@media (max-width: 600px) {
+.rc83 div[class*="rc83nav"] h4, .rc83 div[class*="rc83nav"] .rc83sub{
+display:none!important;
+}
+}

@@ -1,0 +1,74 @@
+.rh03 {
+  margin-bottom: 2.5em;
+}
+#post-id {
+  margin-top: -3.8em;
+  position: relative;
+  z-index: 1;
+}
+.rc81.rc81v0 {
+  padding-top: 0 !important;
+}
+.rc81sub img {
+  max-width: 54px;
+  width: 100%;
+}
+.rc81v0 .rc81w1 {
+  background: #fff;
+  border-radius: 0.5em;
+  padding: 2em;
+}
+.rc81 .rc81photo {
+  padding-bottom: 0;
+  display: block;
+}
+.rc81v0 .rc81sub {
+  margin-bottom: 25px;
+}
+.rc84post div.ocode {
+  max-width: 100%;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  transform: none;
+}
+#post-id .rc84v1 img {
+  padding: 0 20px;
+}
+#post-id table {
+  margin: 5px 10px;
+}
+#post-id table td {
+  padding: 10px;
+}
+#post-id .rc84post em {
+  font-weight: inherit;
+}
+#post-id li p {
+  display: inline;
+}
+#post-id ol li {
+  margin-left: 1em;
+  text-indent: -1em;
+}
+.rc81 .rc81sub {
+  margin: 1em 0;
+}
+figcaption{
+  padding: 0 20px;
+  color:#737373;
+}
+@media (min-width: 0) and (max-width: 1024px) {
+  .rc81v0 {
+    max-width: initial;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+.rc84v2 .rc84bio {
+  align-items:flex-start;
+}
+.text-wrap-short {
+    max-height: 120px;
+    overflow: hidden;
+   }
