@@ -1,5 +1,8 @@
 # Security
 
+## Reports
+[Awesome Annual Security Reports](https://github.com/jacobdjwilson/awesome-annual-security-reports)
+
 ## Splunk
 Configuring filter extractions for Snort
 ```

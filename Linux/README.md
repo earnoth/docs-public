@@ -2,6 +2,13 @@
 
 The following is a list of useful commands that I've learned for Linux, but that I use so rarely, I tend to forget until I need them again. 
 
+## Find command
+The find command is far too unappreciated for the power it gives...
+
+### Sort by date desc
+
+`find . -printf "%T@ %Tc %p\n" | sort -n`
+
 ## SSH to older servers
 
 `ssh -o KexAlgorithms=diffie-hellman-group14-sha1 -c aes256-cbc -oHostKeyAlgorithms=+ssh-rsa 7 <user@host>`
