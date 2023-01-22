@@ -50,6 +50,8 @@ HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Keyboard Layout
 nircmd.exe regsetval binary "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Keyboard Layout\Scancode Map" "00 00 00 00 00 00 00 00 03 00 00 00 1d 00 3a 00 3a 00 1d 00 00 00 00 00"
 ```
 
+## Windows 11
+
 ### Install Windows 11 on VirtualBox
 
 https://www.repairwin.com/how-to-install-windows-11-on-virtualbox-even-without-tpm/
@@ -78,8 +80,21 @@ https://www.repairwin.com/how-to-install-windows-11-on-virtualbox-even-without-t
 
 9. Complete the install process.
 
-### Install Windows 11 Pro on VirtualBox
-
 https://blogs.oracle.com/virtualization/post/install-microsoft-windows-11-on-virtualbox
 
 
+### Restore the classic ribbon in File Explorer
+https://www.techrepublic.com/article/how-to-restore-the-classic-file-explorer-in-windows-11/
+> To restore the classic ribbon to the File Explorer interface, type `regedit` into the Windows 11 search tool and select Regedit from the search results. In the tree, navigate to this key: 
+
+```
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions6
+```
+
+Right-click the Shell Extensions folder and select New | Key and give it the name Blocked
+
+Right-click the Blocked key you just created, and select New | String Value and then enter the following string value as its name: 
+
+```
+{e2bf9676-5f8f-435c-97eb-11607a5bedf7}
+```
