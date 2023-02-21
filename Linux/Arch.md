@@ -89,3 +89,8 @@ Create /etc/fonts/local.conf with following:
 ```  
 Set your font settings to match above in your DE system settings.
 
+## Laggy Chrome UI
+
+## Java Environments
+
+[Arch Wiki Java Entry](https://wiki.archlinux.org/title/java)
