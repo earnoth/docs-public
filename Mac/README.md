@@ -3,6 +3,8 @@
 ## Enabling repeating keys
 Run the following command from the CLI and restart VS Code:
 
+https://vimforvscode.com/enable-key-repeat-vim
+
 ```
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 ```
