@@ -94,3 +94,43 @@ Set your font settings to match above in your DE system settings.
 ## Java Environments
 
 [Arch Wiki Java Entry](https://wiki.archlinux.org/title/java)
+
+## Optimus Manager breakage
+
+When installed from AUR, Optimus will sometimes break with the following error following a system update with `pacman`, which will break Xwindows and put the console in a permanent loop.  
+
+```
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/importlib/metadata/__init__.py", line 563, in from_name
+    return next(cls.discover(name=name))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/bin/optimus-manager", line 33, in <module>
+    sys.exit(load_entry_point('optimus-manager==1.4', 'console_scripts', 'optimus-manager')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/optimus-manager", line 22, in importlib_load_entry_point
+    for entry_point in distribution(dist_name).entry_points
+                       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/metadata/__init__.py", line 981, in distribution
+    return Distribution.from_name(distribution_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/metadata/__init__.py", line 565, in from_name
+    raise PackageNotFoundError(name)
+importlib.metadata.PackageNotFoundError: No package metadata was found for
+optimus-manager
+
+```
+
+To gain access to the system, it is necessary to boot from an Arch install image, mount the filesystems (`/mnt`, `/mnt/boot`, and so forth, then disable the `optimus-manager` in `systemd`:  `systemctl optimus-manager disable`.
+
+The [issue is documented here]() on the Github repository for the project.  [This comment](https://github.com/Askannz/optimus-manager/issues/272#issuecomment-1010192798) on another Issue on the same repository documents how to fix it.  
+
+An alternative procedure is
+
+1. Uninstall optimus-manager
+2. Clone a fresh copy of the repository locally.
+3. Run `makepkg -si` in the fresh cloned copy.
