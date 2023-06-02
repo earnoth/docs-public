@@ -17,6 +17,13 @@ This was tested on XPS15 and G15.
 ```
 pacman -S iw i3-wm i3status lightdm nvidia nvidia-utils screen openssh lightdm-gtk-greeter xf86-video-intel nfs-utils nfsidmap rsync which git firefox chromium base-devel xterm xrdb xorg-xrdb xorg-xmodmap xorg-xbacklight redshift xscreensaver slack flatpak flameshot xsettingsd autocutsel openvpn arandr gimp pavucontrol pulseaudio evince virtualbox virtualbox-host-modules-arch xclip feh dhcpcd xorg-server acpi xorg-mkfontscale
 ```
+
+### Manually launching wpa_supplicant
+
+```
+wpa_supplicant -B -i interface -c /etc/wpa_supplicant/interface-name.conf
+```
+
 ### Fixing ugly fonts
 
 This works well in my situation.
@@ -95,9 +102,13 @@ Set your font settings to match above in your DE system settings.
 
 [Arch Wiki Java Entry](https://wiki.archlinux.org/title/java)
 
-## Optimus Manager breakage
+## Optimus Manager 
 
-When installed from AUR, Optimus will sometimes break with the following error following a system update with `pacman`, which will break Xwindows and put the console in a permanent loop.  
+Handling the dual graphics cards (NVidia and Intel onboard) can be handled via the [Optimus Manager](https://wiki.archlinux.org/title/NVIDIA_Optimus#Use_integrated_graphics_only) package, which must be installed via AUR.
+
+### Breakage
+
+Optimus will sometimes break with the following error following a system update with `pacman`, which will break Xwindows and put the console in a permanent loop.  
 
 ```
 Traceback (most recent call last):
