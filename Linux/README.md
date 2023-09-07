@@ -13,6 +13,16 @@ The find command is far too unappreciated for the power it gives...
 
 `ssh -o KexAlgorithms=diffie-hellman-group14-sha1 -c aes256-cbc -oHostKeyAlgorithms=+ssh-rsa 7 <user@host>`
 
+## Sed commands
+
+### Removing ANSI colors
+
+```
+sed 's/\x1b\[[0-9;]*[mGKH]//g'      # Remove color and move sequences
+sed 's/\x1b\[[0-9;]*[mGKF]//g'      # Remove color and move sequences
+sed 's/\x1b\[[0-9;]*[mGKHF]//g'     # Remove all
+```
+
 ## CDROM / DVD commands
 
 ### Mount an ISO to the filesystem
@@ -146,3 +156,5 @@ https://ostechnix.com/how-to-enable-nested-virtualization-in-virtualbox/
 1. Run `vboxmanage list vms`
 
 2. Run `VBoxManage modifyvm <VMname> --nested-hw-virt on`
+
+
