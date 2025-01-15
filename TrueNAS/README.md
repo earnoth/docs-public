@@ -6,6 +6,18 @@ Checking smartctl on disks
 Checking Zpool status
 `zpool status`
 
+## Replacing a drive
+
+1. Take the drive offline: `zpool offline data <bad disk ID from zpool status>`
+2. Power off the server
+3. Replace the failed drive
+4. Power on the server
+5. Create the geometry: `gpart create -s gtp <new disk OS disk name, eg /dev/da7>`
+6. Add a new partition: `gpart add -t freebsd-zfs <new disk OS name, eg /dev/da7>`
+7. Replace the failed drive in the zpool: `zpool replace data <bad disk ID from zpool status> <new disk OS name, eg /dev/da7>`
+8. This should kick off resilvering which can take days on large filesystems.
+
+
 
 # Links
 
